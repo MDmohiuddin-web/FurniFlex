@@ -1,0 +1,113 @@
+[
+    {
+        "_Id": 1,
+        "name": "Recliner Chair Wood Timber",
+        "category": "Rocking Chairs",
+        "price": 299.00,
+        "discountedPrice": 209.30,
+        "discount": "30% OFF",
+        "description": "Traditional wooden rocking chair with cushioned seat and backrest.",
+        "imageUrl": "https://thumbs4.imagebam.com/d0/fd/81/MEVP9TY_t.png"
+    },
+    {
+        "_Id": 2,
+        "name": "Timber R_Ide Padded",
+        "category": "Rocking Chairs",
+        "price": 589.00,
+        "discountedPrice": 412.30,
+        "discount": "30% OFF",
+        "description": "Modern rocking chair with padded upholstery in different colors.",
+        "imageUrl": "https://thumbs4.imagebam.com/9b/c7/64/MEVP9TV_t.png"
+    },
+    {
+        "_Id": 3,
+        "name": "Blank Bamboo Wicker",
+        "category": "S_Ide Chairs",
+        "price": 299.00,
+        "discountedPrice": 209.30,
+        "discount": "30% OFF",
+        "description": "Open-weave bamboo style s_Ide chair.",
+        
+        "imageUrl": "https://thumbs4.imagebam.com/d0/fd/81/MEVP9TY_t.png"
+    },
+    {
+        "_Id": 4,
+        "name": "Isolated Wooden Rock",
+        "category": "S_Ide Chairs",
+        "price": 185.00,
+        "discountedPrice": 129.50,
+        "discount": "30% OFF",
+        "description": "Wooden s_Ide chair with vertical slats for the backrest.",
+        "imageUrl": "https://thumbs4.imagebam.com/1f/08/fc/MEVP9TZ_t.png"
+    },
+    {
+        "_Id": 5,
+        "name": "Colored Wooden Chair",
+        "category": "Lounge Chairs",
+        "price": 299.00,
+        "discountedPrice": 209.30,
+        "discount": "30% OFF",
+        "description": "Lounge chair with multiple colors and an unconventional shape.",
+        "imageUrl": "https://thumbs4.imagebam.com/d7/54/f9/MEVP9U0_t.png"
+    },
+    {
+        "_Id": 6,
+        "name": "Minimal Empty Rocking",
+        "category": "Lounge Chairs",
+        "price": 299.00,
+        "discountedPrice": 209.30,
+        "discount": "30% OFF",
+        "description": "Minimalist lounge chair with thin legs and armrests.",
+        "imageUrl": "https://thumbs4.imagebam.com/35/83/c3/MEVP9U1_t.png"
+    },
+    {
+        "_Id": 7,
+        "name": "Classic Wooden Rocker",
+        "category": "Rocking Chairs",
+        "price": 350.00,
+        "discountedPrice": 280.00,
+        "discount": "30% OFF",
+        "description": "Classic wooden rocking chair with a high backrest.",
+        "imageUrl": "https://thumbs4.imagebam.com/9b/c7/64/MEVP9TV_t.png"
+    },
+    {
+        "_Id": 8,
+        "name": "Modern Gl_Ider Rocker",
+        "category": "Rocking Chairs",
+        "price": 450.00,
+        "discountedPrice": 337.50,
+        "discount": "30% OFF",
+        "description": "Modern gl_Ider rocker with smooth gl_Iding motion.",
+        "imageUrl": "https://thumbs4.imagebam.com/9b/c7/64/MEVP9TV_t.png"
+    },
+    {
+        "_Id": 9,
+        "name": "Vintage Metal S_Ide Chair",
+        "category": "S_Ide Chairs",
+        "price": 150.00,
+        "discountedPrice": 127.50,
+        "discount": "30% OFF",
+        "description": "Vintage metal s_Ide chair with a rustic finish.",
+        "imageUrl": "https://thumbs4.imagebam.com/9b/c7/64/MEVP9TV_t.png"
+    },
+    {
+        "_Id": 10,
+        "name": "Contemporary Plastic Chair",
+        "category": "S_Ide Chairs",
+        "price": 120.00,
+        "discountedPrice": 108.00,
+        "discount": "30% OFF",
+        "description": "Contemporary plastic s_Ide chair with ergonomic design.",
+        "imageUrl": "https://thumbs4.imagebam.com/9b/c7/64/MEVP9TV_t.png"
+    },
+    {
+        "_Id": 11,
+        "name": "Luxury Leather Lounge",
+        "category": "Lounge Chairs",
+        "price": 600.00,
+        "discountedPrice": 480.00,
+        "discount": "30% OFF",
+        "description": "Luxury leather lounge chair with plush cushions.",
+        "imageUrl": "https://thumbs4.imagebam.com/9b/c7/64/MEVP9TV_t.png"
+    }
+]
