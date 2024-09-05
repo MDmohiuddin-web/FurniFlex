@@ -1,3 +1,4 @@
+
 [
     {
         "_Id": 1,
@@ -22,22 +23,22 @@
     {
         "_Id": 3,
         "name": "Blank Bamboo Wicker",
-        "category": "S_Ide Chairs",
+        "category": "Side Chairs",
         "price": 299.00,
         "discountedPrice": 209.30,
         "discount": "30% OFF",
-        "description": "Open-weave bamboo style s_Ide chair.",
+        "description": "Open-weave bamboo style Side chair.",
         
         "imageUrl": "https://thumbs4.imagebam.com/d0/fd/81/MEVP9TY_t.png"
     },
     {
         "_Id": 4,
         "name": "Isolated Wooden Rock",
-        "category": "S_Ide Chairs",
+        "category": "Side Chairs",
         "price": 185.00,
         "discountedPrice": 129.50,
         "discount": "30% OFF",
-        "description": "Wooden s_Ide chair with vertical slats for the backrest.",
+        "description": "Wooden Side chair with vertical slats for the backrest.",
         "imageUrl": "https://thumbs4.imagebam.com/1f/08/fc/MEVP9TZ_t.png"
     },
     {
@@ -82,26 +83,87 @@
     },
     {
         "_Id": 9,
-        "name": "Vintage Metal S_Ide Chair",
-        "category": "S_Ide Chairs",
-        "price": 150.00,
-        "discountedPrice": 127.50,
+        "name": "Recliner Chair Wood Timber",
+        "category": "Rocking Chairs",
+        "price": 299.00,
+        "discountedPrice": 209.30,
         "discount": "30% OFF",
-        "description": "Vintage metal s_Ide chair with a rustic finish.",
-        "imageUrl": "https://thumbs4.imagebam.com/9b/c7/64/MEVP9TV_t.png"
+        "description": "Traditional wooden rocking chair with cushioned seat and backrest.",
+        "imageUrl": "https://thumbs4.imagebam.com/d0/fd/81/MEVP9TY_t.png"
     },
     {
         "_Id": 10,
-        "name": "Contemporary Plastic Chair",
-        "category": "S_Ide Chairs",
-        "price": 120.00,
-        "discountedPrice": 108.00,
+        "name": "Timber R_Ide Padded",
+        "category": "Rocking Chairs",
+        "price": 589.00,
+        "discountedPrice": 412.30,
         "discount": "30% OFF",
-        "description": "Contemporary plastic s_Ide chair with ergonomic design.",
+        "description": "Modern rocking chair with padded upholstery in different colors.",
         "imageUrl": "https://thumbs4.imagebam.com/9b/c7/64/MEVP9TV_t.png"
     },
     {
         "_Id": 11,
+        "name": "Blank Bamboo Wicker",
+        "category": "Side Chairs",
+        "price": 299.00,
+        "discountedPrice": 209.30,
+        "discount": "30% OFF",
+        "description": "Open-weave bamboo style Side chair.",
+        
+        "imageUrl": "https://thumbs4.imagebam.com/d0/fd/81/MEVP9TY_t.png"
+    },
+    {
+        "_Id": 12,
+        "name": "Isolated Wooden Rock",
+        "category": "Side Chairs",
+        "price": 185.00,
+        "discountedPrice": 129.50,
+        "discount": "30% OFF",
+        "description": "Wooden Side chair with vertical slats for the backrest.",
+        "imageUrl": "https://thumbs4.imagebam.com/1f/08/fc/MEVP9TZ_t.png"
+    },
+    {
+        "_Id": 13,
+        "name": "Colored Wooden Chair",
+        "category": "Lounge Chairs",
+        "price": 299.00,
+        "discountedPrice": 209.30,
+        "discount": "30% OFF",
+        "description": "Lounge chair with multiple colors and an unconventional shape.",
+        "imageUrl": "https://thumbs4.imagebam.com/d7/54/f9/MEVP9U0_t.png"
+    },
+    {
+        "_Id": 14,
+        "name": "Minimal Empty Rocking",
+        "category": "Lounge Chairs",
+        "price": 299.00,
+        "discountedPrice": 209.30,
+        "discount": "30% OFF",
+        "description": "Minimalist lounge chair with thin legs and armrests.",
+        "imageUrl": "https://thumbs4.imagebam.com/35/83/c3/MEVP9U1_t.png"
+    },
+    {
+        "_Id": 15,
+        "name": "Vintage Metal Side Chair",
+        "category": "Side Chairs",
+        "price": 150.00,
+        "discountedPrice": 127.50,
+        "discount": "30% OFF",
+        "description": "Vintage metal Side chair with a rustic finish.",
+        "imageUrl": "https://thumbs4.imagebam.com/9b/c7/64/MEVP9TV_t.png"
+    },
+    {
+        "_Id": 16,
+        "name": "Contemporary Plastic Chair",
+        "category": "Side Chairs",
+        "price": 120.00,
+        "discountedPrice": 108.00,
+        "discount": "30% OFF",
+        "description": "Contemporary plastic Side chair with ergonomic design.",
+        "imageUrl": "https://thumbs4.imagebam.com/9b/c7/64/MEVP9TV_t.png"
+    },
+    {
+        "_Id": 17,
         "name": "Luxury Leather Lounge",
         "category": "Lounge Chairs",
         "price": 600.00,

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Loading from "../components/Loading/Loading";
 
 const UseChairdata = () => {
   const [chair, setchair] = useState([]);
@@ -12,7 +13,7 @@ const UseChairdata = () => {
       });
   }, []);
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading></Loading>;
   }
   return [chair, setchair,loading,setLoading];
 };

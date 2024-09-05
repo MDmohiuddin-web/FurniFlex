@@ -8,7 +8,7 @@ const ProductList = ({ chair }) => {
   return (
     <>
       
-      <div className="card bg-base-100 w-64 shadow-xl">
+      <div className="card bg-base-100 w-64 hover:shadow-xl duration-300 border">
         <figure>
           <img
           className="w-[90%] mt-3"
