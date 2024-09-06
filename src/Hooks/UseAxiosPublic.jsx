@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const AxiosPublic = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://furniflux-server.vercel.app",
 });
 
 const UseAxiosPublic = () => {

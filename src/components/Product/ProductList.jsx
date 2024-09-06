@@ -3,13 +3,16 @@ import { IoLogoEuro } from "react-icons/io";
 import UseAxiosPublic from "../../Hooks/UseAxiosPublic";
 import toast from "react-hot-toast";
 import UseAuth from "../../Hooks/UseAuth";
-import UseChairdata from "../../Hooks/UseChairdata";
+
+import Usecards from "../../Hooks/Usecards";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ProductList = ({ chair }) => {
   const axiosPublic = UseAxiosPublic();
-
+  const navigate = useNavigate();
+  const location = useLocation();
   const { user } = UseAuth();
-  const [, , refetch] = UseChairdata();
+  const [, refetch] = Usecards();
 
   const addToCart = (chair) => {
     if (user && user.email) {
@@ -23,7 +26,7 @@ const ProductList = ({ chair }) => {
         imageUrl: chair.imageUrl,
         price: chair.price,
       };
-      console.log(CartItem);
+      // console.log(CartItem);
 
       // axiosSecure using hook
       axiosPublic
@@ -42,12 +45,12 @@ const ProductList = ({ chair }) => {
         });
     } else {
       toast.error("Please login to add to Cart");
-      // navigate("/Login", { state: { from: location } });
+      navigate("/Login", { state: { from: location } });
     }
   };
 
   return (
-    <div className="card bg-base-100 w-64 hover:shadow-xl duration-300 border">
+    <div className="card bg-base-100 md:w-[250px] hover:shadow-xl duration-300 border ">
       <figure>
         <img className="w-[90%] mt-3" src={chair?.imageUrl} alt="Shoes" />
       </figure>

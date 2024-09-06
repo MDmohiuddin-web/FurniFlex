@@ -5,9 +5,11 @@ import { useContext } from "react";
 import { AuthContext } from "./contexts/AuthProvider";
 import profilepic from "../assets/profile.png";
 import toast from "react-hot-toast";
+import Usecards from "../Hooks/Usecards";
 
 const Navigation = () => {
   const { logOut, user } = useContext(AuthContext);
+  const [Cart] = Usecards();
   const links = (
     <>
       <NavLink
@@ -27,7 +29,7 @@ const Navigation = () => {
         Products
       </NavLink>
       <NavLink
-        to="/Categories"
+       
         className="text-black hover:text-white hover:bg-black p-2
 
    rounded duration-300"
@@ -35,7 +37,7 @@ const Navigation = () => {
         Categories
       </NavLink>
       <NavLink
-        to="/Custom"
+        
         className="text-black hover:text-white hover:bg-black p-2
 
    rounded duration-300"
@@ -43,7 +45,7 @@ const Navigation = () => {
         Custom
       </NavLink>
       <NavLink
-        to="/Blog"
+    
         className="text-black hover:text-white hover:bg-black p-2
   
   rounded duration-300"
@@ -112,9 +114,9 @@ const Navigation = () => {
             >
               <div className="indicator">
                 <LiaShoppingBagSolid className="text-2xl"></LiaShoppingBagSolid>
-                {/* <span className="badge badge-sm indicator-item text-white bg-yellow-500 border-none font-bold">
+                <span className="badge badge-sm indicator-item text-white bg-black border-none font-bold">
                   {`+${Cart?.length || 0}`}
-                </span> */}
+                </span>
               </div>
             </Link>
           </div>

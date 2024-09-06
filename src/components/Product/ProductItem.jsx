@@ -30,8 +30,8 @@ const ProductItem = () => {
   return (
     <div>
       <div className="md:flex justify-between  py-10 m-auto">
-        <div className="md:w-[20%]  border rounded-md flex justify-end">
-          <div className="w-4/5 text-center flex flex-col capitalize space-y-3">
+        <div className="md:w-[20%]  border-r rounded-md flex justify-end">
+          <div className="md:w-4/5 w-full text-center flex flex-col capitalize space-y-3">
             <button
               onClick={() => setSelectedCategory("All")}
               className="text-center  btn  hover:text-white border-none hover:bg-black bg-white text-black"
@@ -58,7 +58,8 @@ const ProductItem = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-wrap gap-4 m-auto md:w-[75%] ">
+
+        <div className="flex flex-wrap gap-4 m-auto md:w-[80%] p-5  rounded-md duration-300" >
           {/* Display the total number of chairs (commented out) */}
           {/* <h4>{chair.length}</h4> */}
 
@@ -67,6 +68,8 @@ const ProductItem = () => {
             <ProductList key={chair._Id} chair={chair}></ProductList>
           ))}
         </div>
+
+
       </div>
       <div className="w-4/5 m-auto text-center mb-5 gap-3 ">
         <Pagination

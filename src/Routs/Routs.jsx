@@ -7,38 +7,43 @@ import Login from "../components/Auth/Login";
 import SignUp from "../components/Auth/SignUp";
 import Profile from "../components/Auth/Profile";
 import Oderdetails from "../components/pages/Oderdetails";
-
+import PrivateRouts from "../../PrivateRouts/PrivateRouts";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout></Layout>,
-      errorElement: <ErrorPage></ErrorPage>,
-      children: [
-        {
-          path: "/",
-          element: <Home></Home>,
-        },{
-          path:'/ProductItem',
-          element:<ProductItem></ProductItem>},
-          {
-            path:'/Login',
-            element:<Login></Login>
-          },
-          {
-            path:'/SignUp',
-            element:<SignUp></SignUp>
-          },
-          {
-            path:'/Profile',
-            element:<Profile></Profile>
-          },{
-            path:'/Oderdetails',
-            element:<Oderdetails></Oderdetails>
-          }
-
-       
-      ]
-    },
-  ]);
-  export default router
+  {
+    path: "/",
+    element: <Layout></Layout>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/ProductItem",
+        element: <ProductItem></ProductItem>,
+      },
+      {
+        path: "/Login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/SignUp",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "/Profile",
+        element: <Profile></Profile>,
+      },
+      {
+        path: "/Oderdetails",
+        element: (
+          <PrivateRouts>
+            <Oderdetails></Oderdetails>
+          </PrivateRouts>
+        ),
+      },
+    ],
+  },
+]);
+export default router;

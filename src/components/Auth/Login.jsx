@@ -24,7 +24,7 @@ const Login = () => {
       .then((res) => {
         toast.success("User login successfully");
         const user = res.user;
-        console.log(user);
+        // console.log(user);
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -35,7 +35,7 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((res) => {
-        console.log(res.user);
+        // console.log(res.user);
 
         navigate(from, { replace: true });
 

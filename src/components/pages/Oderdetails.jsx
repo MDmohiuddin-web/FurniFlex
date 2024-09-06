@@ -1,12 +1,9 @@
 import toast from "react-hot-toast";
-
 import UseAxiosPublic from "../../Hooks/UseAxiosPublic";
-
 import Loading from "../Loading/Loading";
-
 import { RxCross1 } from "react-icons/rx";
 import Usecards from "../../Hooks/Usecards";
-import { IoLogoEuro } from "react-icons/io";
+
 
 const Oderdetails = () => {
   const axiosPublic = UseAxiosPublic();
@@ -20,7 +17,7 @@ const Oderdetails = () => {
       .delete(`/cards/${id}`)
       .then((res) => {
         // Check if the data is deleted
-        console.log(res.data);
+        // console.log(res.data);
         if (res.data.deletedCount > 0) {
           toast.success(`item deleted successfully`);
           // Refetch Cart to update the Cart items count
@@ -30,7 +27,7 @@ const Oderdetails = () => {
         }
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
         toast.error("An error occurred while deleting the item");
       });
   };
@@ -42,8 +39,11 @@ const Oderdetails = () => {
   return (
     <div className="w-[90%] m-auto gap-5 md:flex my-10 h-svh">
       {/* for table */}
-      <div className="md:w-[70%] bg-[#fafafa]">
-        <div className="overflow-x-auto capitalize my-5  md:h-[530px] ">
+      <div className="md:w-[70%] ">
+        <div>
+          <h2 className="font-bold p-4">An overview of your order</h2>
+        </div>
+        <div className="overflow-x-auto capitalize my-5  md:h-[530px] bg-[#fafafa] rounded-md py-5">
           <table className="table  ">
             {/* head */}
             <thead className="  rounded-t-md  ">
@@ -105,14 +105,11 @@ const Oderdetails = () => {
       {/* for price */}
 
       <div className="md:w-[30%] space-y-3">
-        {/* <div className="card card-compact bg-[#fafafa] w-full rounded-lg ">
-          <div className="card-body hover:shadow-xl">
-            
-          </div>
-        </div> */}
+        <div>
+          <h2 className="font-bold p-5">Oder details</h2>
+        </div>
 
         <div className="bg-[#fafafa] w-full rounded-lg p-2">
-          
           <div className="w-full flex justify-between p-2 ">
             <p>Subtotal </p>
             <p className="text-left">€ {TotalPrice}</p>
@@ -125,7 +122,6 @@ const Oderdetails = () => {
             <p>Estimated Tax </p>
             <p>€ -</p>
           </div>
-          
 
           <hr />
           <h2 className="card-title p-2">Total Price € {TotalPrice}</h2>
