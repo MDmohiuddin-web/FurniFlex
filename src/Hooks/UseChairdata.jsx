@@ -1,21 +1,19 @@
-import { useEffect, useState } from "react";
-import Loading from "../components/Loading/Loading";
+import { useQuery } from "@tanstack/react-query";
+import UseAxiosPublic from "./UseAxiosPublic";
+
+
+
 
 const UseChairdata = () => {
-  const [chair, setchair] = useState([]);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    fetch("data.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setchair(data);
-        setLoading(false);
-      });
-  }, []);
-  if (loading) {
-    return <Loading></Loading>;
-  }
-  return [chair, setchair,loading,setLoading];
+  const axiosPublic=UseAxiosPublic()
+  const { data: chairs = [], isLoading: loading,refetch }= useQuery({
+    queryKey: ["chairs"],
+    queryFn: async () => {
+      const res = await axiosPublic.get("/chairs");
+      return res.data;
+    },
+  });
+  return [chairs, loading,refetch];
 };
 
 export default UseChairdata;

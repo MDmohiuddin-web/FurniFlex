@@ -16,6 +16,7 @@ const ProductItem = () => {
       .then((data) => {
         setchair(data);
         setLoading(false);
+        setpostperpage(8);
       });
   }, []);
   if (loading) {
