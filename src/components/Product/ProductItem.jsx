@@ -1,32 +1,34 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import ProductList from "./ProductList";
 import Loading from "../Loading/Loading";
 import Pagination from "../Pagination/Pagination";
+import UseChairdata from "../../Hooks/UseChairdata";
 
 const ProductItem = () => {
-  const [chair, setchair] = useState([]);
-  const [loading, setLoading] = useState(true);
+  
+  
   const [Cureentpage, setCureentPage] = useState(1);
   const [postperpage, setpostperpage] = useState(8);
+  const [chairs,loading] = UseChairdata()
 
 
-  useEffect(() => {
-    fetch("data.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setchair(data);
-        setLoading(false);
-        setpostperpage(8);
-      });
-  }, []);
+ 
   if (loading) {
     return <Loading></Loading>;
   }
 
+  // filter items from menu /data base
+  const LoungeChairs   = chairs.filter((item) => item.category === "Lounge Chairs");
+  const SideChairs     = chairs.filter((item) => item.category === "Side Chairs");
+  const RockingChairs    = chairs.filter((item) => item.category === "Rocking Chairs");
+  console.log(LoungeChairs,SideChairs,RockingChairs)
+
+
   const lastpostinsex=Cureentpage*postperpage;
   const firstpostinsex=lastpostinsex- postperpage;
-  const currentpost=chair.slice(firstpostinsex,lastpostinsex);
+  const currentpost=chairs.slice(firstpostinsex,lastpostinsex);
   
+
 
   return (
     <div>
@@ -52,7 +54,7 @@ const ProductItem = () => {
         
       </div>
       <div className="w-4/5 m-auto text-center mb-5 gap-3 ">
-        <Pagination totalpost={chair.length} postperpage={postperpage} setCureentPage={setCureentPage} Cureentpage={Cureentpage}></Pagination>
+        <Pagination totalpost={chairs.length} postperpage={postperpage} setCureentPage={setCureentPage} Cureentpage={Cureentpage}></Pagination>
       </div>
       
     </div>
