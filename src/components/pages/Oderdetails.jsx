@@ -6,16 +6,18 @@ import Loading from "../Loading/Loading";
 
 import { RxCross1 } from "react-icons/rx";
 import Usecards from "../../Hooks/Usecards";
+import { IoLogoEuro } from "react-icons/io";
 
 const Oderdetails = () => {
   const axiosPublic = UseAxiosPublic();
 
+  const [Cart, refetch, loading] = Usecards();
 
-  const [Cart, refetch,loading] = Usecards();
+  const TotalPrice = Cart.reduce((sum, item) => sum + item.price, 0);
 
   const handleDelete = (id) => {
-    
-    axiosPublic.delete(`/cards/${id}`)
+    axiosPublic
+      .delete(`/cards/${id}`)
       .then((res) => {
         // Check if the data is deleted
         console.log(res.data);
@@ -32,9 +34,6 @@ const Oderdetails = () => {
         toast.error("An error occurred while deleting the item");
       });
   };
-  
-
-   
 
   if (loading) {
     return <Loading></Loading>;
@@ -44,8 +43,7 @@ const Oderdetails = () => {
     <div className="w-[90%] m-auto gap-5 md:flex my-10 h-svh">
       {/* for table */}
       <div className="md:w-[70%] bg-[#fafafa]">
-
-      <div className="overflow-x-auto capitalize my-5  md:h-[530px] ">
+        <div className="overflow-x-auto capitalize my-5  md:h-[530px] ">
           <table className="table  ">
             {/* head */}
             <thead className="  rounded-t-md  ">
@@ -64,7 +62,10 @@ const Oderdetails = () => {
             <tbody className="mt-2 ">
               {/* row 1 */}
               {Cart.map((item, index) => (
-                <tr key={item._id} className="hover:shadow-md duration-300  border-none">
+                <tr
+                  key={item._id}
+                  className="hover:shadow-md duration-300  border-none"
+                >
                   <th>
                     <label>
                       <h4>{index + 1}</h4>
@@ -86,13 +87,13 @@ const Oderdetails = () => {
                   <td>
                     <h2>{item?.name}</h2>
                   </td>
-                  <td> $ {item?.price}</td>
+                  <td className=""> € {item?.price}</td>
                   <th>
                     <button
                       onClick={() => handleDelete(item?._id)}
                       className="btn bg-red-600  text-white"
                     >
-                     <RxCross1 />
+                      <RxCross1 />
                     </button>
                   </th>
                 </tr>
@@ -103,13 +104,31 @@ const Oderdetails = () => {
       </div>
       {/* for price */}
 
-
       <div className="md:w-[30%] space-y-3">
-        <div className="card card-compact bg-[#fafafa] w-full rounded-lg ">
+        {/* <div className="card card-compact bg-[#fafafa] w-full rounded-lg ">
           <div className="card-body hover:shadow-xl">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            
           </div>
+        </div> */}
+
+        <div className="bg-[#fafafa] w-full rounded-lg p-2">
+          
+          <div className="w-full flex justify-between p-2 ">
+            <p>Subtotal </p>
+            <p className="text-left">€ {TotalPrice}</p>
+          </div>
+          <div className="w-full flex justify-between p-2">
+            <p>Shipping </p>
+            <p>Free</p>
+          </div>
+          <div className="w-full flex justify-between p-2">
+            <p>Estimated Tax </p>
+            <p>€ -</p>
+          </div>
+          
+
+          <hr />
+          <h2 className="card-title p-2">Total Price € {TotalPrice}</h2>
         </div>
         <div className="card-actions justify-end">
           <button className="btn w-full text-white border-none bg-black hover:bg-white hover:text-black">
