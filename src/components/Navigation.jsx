@@ -66,7 +66,7 @@ const Navigation = () => {
   };
 
   return (
-    <div className="navbar  text-white  bg-opacity-30 m-auto  md:w-[90%] pt-5">
+    <div className="navbar  text-white  bg-opacity-30 m-auto  md:w-[90%] pt-5 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -105,7 +105,7 @@ const Navigation = () => {
         <div className="flex gap-5 text-black">
           <div className="dropdown dropdown-end">
             <Link
-              to=""
+              to="/Oderdetails"
               tabIndex={0}
               role="button"
               className="btn btn-ghost btn-circle"

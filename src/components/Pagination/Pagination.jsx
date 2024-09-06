@@ -1,3 +1,4 @@
+import { FaRegArrowAltCircleLeft, FaRegArrowAltCircleRight } from "react-icons/fa";
 
 
 const Pagination = ({ postperpage, totalpost, setCureentPage, Cureentpage }) => {
@@ -20,8 +21,8 @@ const Pagination = ({ postperpage, totalpost, setCureentPage, Cureentpage }) => 
 
     return (
         <div>
-            <button onClick={handlePrevious} disabled={Cureentpage === 1} className="text-center border btn hover:text-white border-none hover:bg-black bg-white text-black">
-                Previous
+            <button onClick={handlePrevious} disabled={Cureentpage === 1} className="text-center border btn mx-1 hover:text-white border-none hover:bg-black bg-white text-black">
+            <FaRegArrowAltCircleLeft />
             </button>
             {
                 pages.map((page, indx) => {
@@ -29,15 +30,15 @@ const Pagination = ({ postperpage, totalpost, setCureentPage, Cureentpage }) => 
                         <button
                             key={indx}
                             onClick={() => setCureentPage(page)}
-                            className={`text-center border btn hover:text-white border-none hover:bg-black ${Cureentpage === page ? 'bg-black text-white' : 'bg-white text-black'}`}
+                            className={`text-center border btn mx-1 hover:text-white border-none hover:bg-black ${Cureentpage === page ? 'bg-black text-white' : 'bg-white text-black'}`}
                         >
                             {page}
                         </button>
                     );
                 })
             }
-            <button onClick={handleNext} disabled={Cureentpage === pages.length} className="text-center border btn hover:text-white border-none hover:bg-black bg-white text-black">
-                Next
+            <button onClick={handleNext} disabled={Cureentpage === pages.length} className="text-center border btn mx-1 hover:text-white border-none hover:bg-black bg-white text-black">
+            <FaRegArrowAltCircleRight />
             </button>
         </div>
     );

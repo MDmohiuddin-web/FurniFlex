@@ -13,7 +13,7 @@ const UseChairdata = () => {
       return res.data;
     },
   });
-  return [chairs, loading,refetch];
+  return [chairs, loading ,refetch];
 };
 
 export default UseChairdata;

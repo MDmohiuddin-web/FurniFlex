@@ -27,7 +27,7 @@ const Home = () => {
       </div>
       {/*  */}
       <div className="w-[90%] m-auto text-center text-2xl md:text-4xl font-bold">
-        <h2>our product list</h2>
+        <h2>Our Products list</h2>
       </div>
       <ProductItem></ProductItem>
     </div>

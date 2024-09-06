@@ -10,7 +10,7 @@ const Loading = () => {
         className="flex items-center space-x-2"
       >
         <svg
-          className="h-20 w-20 animate-spin stroke-[#0be890] transition delay-300 "
+          className="h-20 w-20 animate-spin stroke-gray-400 transition delay-300 "
           viewBox="0 0 256 256"
         >
           <line
@@ -86,7 +86,7 @@ const Loading = () => {
             strokeWidth="24"
           ></line>
         </svg>
-        <span className="animate-pulse text-xl md:text-6xl text-[#0be890] transition delay-300">Loading...</span>
+        <span className="animate-pulse text-xl md:text-6xl text-gray-400 transition delay-300">Loading...</span>
       </div>
       </div>
     );

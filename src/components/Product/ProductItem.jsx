@@ -1,62 +1,81 @@
-import {  useState } from "react";
+import { useState } from "react";
 import ProductList from "./ProductList";
 import Loading from "../Loading/Loading";
 import Pagination from "../Pagination/Pagination";
 import UseChairdata from "../../Hooks/UseChairdata";
 
 const ProductItem = () => {
-  
-  
-  const [Cureentpage, setCureentPage] = useState(1);
-  const [postperpage, setpostperpage] = useState(8);
-  const [chairs,loading] = UseChairdata()
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(8);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [chairs, loading] = UseChairdata();
 
-
- 
   if (loading) {
     return <Loading></Loading>;
   }
 
-  // filter items from menu /data base
-  const LoungeChairs   = chairs.filter((item) => item.category === "Lounge Chairs");
-  const SideChairs     = chairs.filter((item) => item.category === "Side Chairs");
-  const RockingChairs    = chairs.filter((item) => item.category === "Rocking Chairs");
-  console.log(LoungeChairs,SideChairs,RockingChairs)
+  // Filter items based on selected category
+  const filteredChairs =
+    selectedCategory === "All"
+      ? chairs
+      : chairs.filter((item) => item.category === selectedCategory);
 
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = filteredChairs.slice(firstPostIndex, lastPostIndex);
 
-  const lastpostinsex=Cureentpage*postperpage;
-  const firstpostinsex=lastpostinsex- postperpage;
-  const currentpost=chairs.slice(firstpostinsex,lastpostinsex);
-  
+ 
 
 
   return (
     <div>
       <div className="md:flex justify-between  py-10 m-auto">
-        <div className="md:w-[20%] space-y-3 border rounded-md text-center flex flex-col">
-          <button className="text-center  btn  hover:text-white border-none hover:bg-black bg-white text-black">
-            Rocking chair
-          </button>
-          <button className="text-center  btn  hover:text-white border-none hover:bg-black bg-white text-black">
-            Lounge chair
-          </button>
-          <button className="text-center  btn  hover:text-white border-none hover:bg-black bg-white text-black">
-            Side chair
-          </button>
+        <div className="md:w-[20%]  border rounded-md flex justify-end">
+          <div className="w-4/5 text-center flex flex-col capitalize space-y-3">
+            <button
+              onClick={() => setSelectedCategory("All")}
+              className="text-center  btn  hover:text-white border-none hover:bg-black bg-white text-black"
+            >
+              All chairs
+            </button>
+            <button
+              onClick={() => setSelectedCategory("Rocking Chairs")}
+              className="text-center  btn  hover:text-white border-none hover:bg-black bg-white text-black"
+            >
+              Rocking chair
+            </button>
+            <button
+              onClick={() => setSelectedCategory("Side Chairs")}
+              className="text-center  btn  hover:text-white border-none hover:bg-black bg-white text-black"
+            >
+              Side chair
+            </button>
+            <button
+              onClick={() => setSelectedCategory("Lounge Chairs")}
+              className="text-center  btn  hover:text-white border-none hover:bg-black bg-white text-black"
+            >
+              Lounge chair
+            </button>
+          </div>
         </div>
         <div className="flex flex-wrap gap-4 m-auto md:w-[75%] ">
+          {/* Display the total number of chairs (commented out) */}
           {/* <h4>{chair.length}</h4> */}
-          {currentpost.map((chair) => (
+
+          {/* Map through the current page of chairs and render ProductList component for each */}
+          {currentPosts.map((chair) => (
             <ProductList key={chair._Id} chair={chair}></ProductList>
           ))}
-          
         </div>
-        
       </div>
       <div className="w-4/5 m-auto text-center mb-5 gap-3 ">
-        <Pagination totalpost={chairs.length} postperpage={postperpage} setCureentPage={setCureentPage} Cureentpage={Cureentpage}></Pagination>
+        <Pagination
+          totalpost={chairs.length}
+          postperpage={postsPerPage}
+          setCureentPage={setCurrentPage}
+          Cureentpage={currentPage}
+        ></Pagination>
       </div>
-      
     </div>
   );
 };

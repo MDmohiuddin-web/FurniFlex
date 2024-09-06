@@ -6,6 +6,7 @@ import ProductItem from "../components/Product/ProductItem";
 import Login from "../components/Auth/Login";
 import SignUp from "../components/Auth/SignUp";
 import Profile from "../components/Auth/Profile";
+import Oderdetails from "../components/pages/Oderdetails";
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,9 @@ const router = createBrowserRouter([
           {
             path:'/Profile',
             element:<Profile></Profile>
+          },{
+            path:'/Oderdetails',
+            element:<Oderdetails></Oderdetails>
           }
 
        
