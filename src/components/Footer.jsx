@@ -8,7 +8,6 @@ import { FaFacebookSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="bg-black">
-      
       <footer className="footer bg-black text-white  p-10">
         <Link to="/">
           <img src={logo} alt="" />
@@ -96,22 +95,36 @@ const Footer = () => {
       </footer>
       {/*  */}
       <footer className="bg-black text-[#80849e] p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex space-x-4"><FaFacebookSquare /> <FaInstagram /> <FaSquareXTwitter /> <IoLogoLinkedin /></div>
-        <nav className="flex space-x-4">
-          <a href="#" className="hover:underline">Home</a>
-          <a href="#" className="hover:underline">Roadmap</a>
-          <a href="#" className="hover:underline">Privacy Policy</a>
-          <a href="#" className="hover:underline">General Terms</a>
-          <a href="#" className="hover:underline">Contact</a>
-        </nav>
-        <div className="language-selector flex justify-center items-center text-center gap-2"><LiaFlagUsaSolid /> United States (English)</div>
-      </div>
-      <div className="text-center mt-4">© 2024 Your Company. All rights reserved.</div>
-    </footer>
-      
-
-     
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="flex space-x-4 flex-wrap ">
+            <FaFacebookSquare /> <FaInstagram /> <FaSquareXTwitter />{" "}
+            <IoLogoLinkedin />
+          </div>
+          <nav className="flex space-x-4 flex-wrap justify-center items-center">
+            <a href="#" className="hover:underline">
+              Home
+            </a>
+            <a href="#" className="hover:underline">
+              Roadmap
+            </a>
+            <a href="#" className="hover:underline">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:underline">
+              General Terms
+            </a>
+            <a href="#" className="hover:underline">
+              Contact
+            </a>
+          </nav>
+          <div className="language-selector flex justify-center items-center text-center gap-2">
+            <LiaFlagUsaSolid /> United States (English)
+          </div>
+        </div>
+        <div className="text-center mt-4">
+          © 2024 Your Company. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 };

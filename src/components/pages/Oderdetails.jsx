@@ -27,7 +27,7 @@ const Oderdetails = () => {
         }
       })
       .catch((err) => {
-        // console.log(err);
+        console.log(err);
         toast.error("An error occurred while deleting the item");
       });
   };
@@ -37,7 +37,7 @@ const Oderdetails = () => {
   }
 
   return (
-    <div className="w-[90%] m-auto gap-5 md:flex my-10 h-svh">
+    <div className="w-[90%] m-auto gap-5 md:flex my-10 min-h-svh ">
       {/* for table */}
       <div className="md:w-[70%] ">
         <div>
